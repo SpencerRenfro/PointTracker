@@ -7,9 +7,11 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import { useAppContext } from '@/context/AppContext';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
+  const { currentTour } = useAppContext();
 
   return (
     <Tabs
@@ -34,10 +36,26 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="scan"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'Scan',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="qrcode" color={color} />,
+          // Always show the scan tab for testing
+          // tabBarStyle: !currentTour ? { display: 'none' } : undefined,
+        }}
+      />
+      <Tabs.Screen
+        name="history"
+        options={{
+          title: 'History',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="clock.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: 'Settings',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="gear" color={color} />,
         }}
       />
     </Tabs>

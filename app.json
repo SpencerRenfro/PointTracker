@@ -8,15 +8,6 @@
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
-    },
     "web": {
       "bundler": "metro",
       "output": "static",
@@ -34,6 +25,20 @@
         }
       ]
     ],
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": ["android.permission.CAMERA", "android.permission.NFC"]
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera to scan QR codes.",
+        "NFCReaderUsageDescription": "This app uses NFC to scan tags for points."
+      }
+    },
     "experiments": {
       "typedRoutes": true
     }

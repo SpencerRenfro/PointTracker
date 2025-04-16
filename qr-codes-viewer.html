@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point Tracker QR Codes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .qr-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .qr-code {
+            text-align: center;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .qr-code:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        .qr-code h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .qr-code p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .qr-code .point-id {
+            font-family: monospace;
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        img {
+            max-width: 200px;
+            height: auto;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+        .instructions {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 40px;
+            border-left: 5px solid #4a90e2;
+        }
+        .instructions h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .instructions ol {
+            margin-left: 20px;
+            line-height: 1.6;
+        }
+        @media print {
+            body {
+                background-color: white;
+            }
+            .qr-code {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+            .instructions {
+                background-color: white;
+                border-left: 1px solid #ddd;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Point Tracker QR Codes</h1>
+    
+    <div class="qr-container">
+        <div class="qr-code">
+            <h2>Main Entrance</h2>
+            <div class="point-id">point1</div>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=point1" alt="QR Code for Main Entrance">
+            <p>The main entrance to the campus</p>
+        </div>
+        
+        <div class="qr-code">
+            <h2>Library</h2>
+            <div class="point-id">point2</div>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=point2" alt="QR Code for Library">
+            <p>The central library with study areas</p>
+        </div>
+        
+        <div class="qr-code">
+            <h2>Student Center</h2>
+            <div class="point-id">point3</div>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=point3" alt="QR Code for Student Center">
+            <p>Student services and dining options</p>
+        </div>
+        
+        <div class="qr-code">
+            <h2>Science Lab</h2>
+            <div class="point-id">point4</div>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=point4" alt="QR Code for Science Lab">
+            <p>Research laboratories and classrooms</p>
+        </div>
+    </div>
+    
+    <div class="instructions">
+        <h2>How to Use These QR Codes</h2>
+        <ol>
+            <li>Start the Point Tracker app on your device</li>
+            <li>On the home screen, tap "Start Tour" for the Campus Tour</li>
+            <li>Navigate to the Scan tab</li>
+            <li>Point your camera at each QR code to scan it</li>
+            <li>After scanning, you'll see information about that location</li>
+            <li>After scanning all four points, you'll see the tour completion screen</li>
+        </ol>
+        <p><strong>Tip:</strong> You can print this page to have physical QR codes for testing.</p>
+    </div>
+</body>
+</html>

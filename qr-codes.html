@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point Tracker QR Codes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .qr-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        .qr-code {
+            text-align: center;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+        }
+        .qr-code h2 {
+            margin-top: 0;
+        }
+        .qr-code p {
+            margin-bottom: 15px;
+        }
+        img {
+            max-width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Point Tracker QR Codes</h1>
+    <p>Scan these QR codes with the Point Tracker app to test the tour functionality.</p>
+    
+    <div class="qr-container">
+        <div class="qr-code">
+            <h2>Main Entrance</h2>
+            <p>Point ID: point1</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=point1" alt="QR Code for Main Entrance">
+            <p>The main entrance to the campus</p>
+        </div>
+        
+        <div class="qr-code">
+            <h2>Library</h2>
+            <p>Point ID: point2</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=point2" alt="QR Code for Library">
+            <p>The central library with study areas</p>
+        </div>
+        
+        <div class="qr-code">
+            <h2>Student Center</h2>
+            <p>Point ID: point3</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=point3" alt="QR Code for Student Center">
+            <p>Student services and dining options</p>
+        </div>
+        
+        <div class="qr-code">
+            <h2>Science Lab</h2>
+            <p>Point ID: point4</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=point4" alt="QR Code for Science Lab">
+            <p>Research laboratories and classrooms</p>
+        </div>
+    </div>
+    
+    <div style="margin-top: 40px; text-align: center;">
+        <p><strong>Instructions:</strong></p>
+        <ol style="text-align: left; display: inline-block;">
+            <li>Start the Point Tracker app</li>
+            <li>Start the "Campus Tour" from the home screen</li>
+            <li>Go to the Scan tab</li>
+            <li>Make sure QR Code scanning is selected</li>
+            <li>Scan each QR code to progress through the tour</li>
+            <li>After scanning all points, you'll see the tour completion screen</li>
+        </ol>
+    </div>
+</body>
+</html>
